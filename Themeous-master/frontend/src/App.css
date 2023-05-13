@@ -1,0 +1,30 @@
+.custom-link .active{
+    color: #fff !important; 
+}
+
+*{
+    /* transition: all 0.3s ease; */
+}
+
+.main-btn{
+    background-image: linear-gradient(to right, #8839da, #4e54c8);
+    color: #fff;
+    /* border: 1px solid #000; */
+    padding: 20px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1) ;
+}
+
+.main-btn:hover{
+    color: #fff;
+    background-image: linear-gradient(to right, #4e54c8, #8839da);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3) ;
+    transform: translateY(-3px); ;
+}
