@@ -20,6 +20,7 @@ app.use('/user', userRouter);
 app.use('/util', utilRouter);
 
 app.use(express.static('./archives'))
+app.use(express.static('./static/uploads'))
 
 app.get('/', (req, res) => {
     console.log('Request at index');

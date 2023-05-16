@@ -86,7 +86,7 @@ const UserProfile = () => {
               </div>
               <div className="card-body">
 
-                <img height={200} className="border-rounded d-block m-auto" src={currentUser.avatar?`${url}/${currentUser.avatar}` : '/avatar.png'} alt="" />
+                <img height={200} className="border-rounded d-block m-auto" src={currentUser.avatar?`${url}/${currentUser.avatar}` : '/avatar.jpg'} alt="" />
                 <label className="btn btn-outline-secondary w-100 mt-3" htmlFor="upload-image">  <i class="fas fa-pen"></i>&nbsp;Edit </label>
                 <input type="file" hidden onChange={uploadProfileImage} id="upload-image" />
                 <p className="text-center">Welcome

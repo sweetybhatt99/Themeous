@@ -47,9 +47,41 @@ const Customize = () => {
       value
     );
     // console.log(
-    //   getComputedStyle(document.documentElement).getPropertyValue("--bs-blue")
-    // );
-  };
+      //   getComputedStyle(document.documentElement).getPropertyValue("--bs-blue")
+      // );
+    };
+    
+    const updateBorderRadius = (value) => {
+    document.documentElement.style.setProperty(
+      `--bs-border-radius`,
+      value+'px'
+    );
+    document.documentElement.style.setProperty(
+      `--bs-border-radius-sm`,
+      value+'px'
+    );
+    document.documentElement.style.setProperty(
+      `--bs-border-radius-lg`,
+      value+'px'
+    );
+    document.documentElement.style.setProperty(
+      `--bs-border-radius-xl`,
+      value+'px'
+    );
+    document.documentElement.style.setProperty(
+      `--bs-border-radius-2xl`,
+      value+'px'
+    );
+
+    }
+
+
+    const updateFamily = (value) => {
+    document.documentElement.style.setProperty(
+      `--bs-font-sans-serif`,
+      value
+    );
+  }
 
   const showAccent = () => {
     return options.bootstrap.accent.map((accent, index) => (
@@ -147,7 +179,9 @@ const Customize = () => {
                 <select
                   className="form-control"
 
-                  onChange={(e) => setFontFamily(e.target.value)}
+                  onChange={(e) => {
+                    updateFamily(e.target.value);
+                    setFontFamily(e.target.value)}}
                 >
                   {fontFamilOptions.map((font, index) => (
                     <option key={index} value={font}>
@@ -167,7 +201,9 @@ const Customize = () => {
                     value={borderRadius}
                     min={0}
                     max={50}
-                    onChange={(e) => setBorderRadius(parseInt(e.target.value))}
+                    onChange={(e) => {
+                      updateBorderRadius(parseInt(e.target.value));
+                      setBorderRadius(parseInt(e.target.value))}}
                   />
                 </div>
               </div>
