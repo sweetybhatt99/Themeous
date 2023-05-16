@@ -39,11 +39,6 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink className="dropdown-item" to="/user/mythemes">
-              My Themes
-            </NavLink>
-          </li>
-          <li>
             <hr className="dropdown-divider" />
           </li>
           <li>
