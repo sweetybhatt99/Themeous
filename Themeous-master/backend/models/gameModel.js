@@ -10,5 +10,4 @@ const userSchema = new Schema({
   created_at: Date,
   updated_at: Date,
 });
-
 module.exports = model("games", userSchema);

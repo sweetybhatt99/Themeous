@@ -43,15 +43,6 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li className="custom-link">
-                <NavLink to="/main/customize" className="nav-link text-secondary">
-                  <div className="d-flex align-items-center flex-column">
-                    <i class="fas fa-pen-alt fa-xl d-block"></i>
-                    
-                    <p className="mb-0 mt-2">Customize</p>
-                  </div>
-                </NavLink>
-              </li>
-              <li className="custom-link">
                 <NavLink to="/main/browse" className="nav-link text-secondary">
                   <div className="d-flex align-items-center flex-column">
                     <i class="fas fa-home fa-xl d-block"></i>
