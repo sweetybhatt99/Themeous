@@ -34,16 +34,16 @@ const Customize = () => {
 
   const [selTheme, setSelTheme] = useState(bootstrapVars);
   const color = getComputedStyle(document.documentElement).getPropertyValue(
-    "--bs-blue"
+    "--bs-primary"
   );
 
   const setColor = (classname, value) => {
     let temp = colorVals;
     temp[classname] = value;
     setColorVals(temp);
-
+    console.log(classname);
     document.documentElement.style.setProperty(
-      `--bs-${classToColor[classname]}`,
+      `--bs-${classname}`,
       value
     );
     // console.log(
