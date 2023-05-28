@@ -25,9 +25,9 @@ import AntDCustomizer from "./components/user/AntDCustomizer";
 function App() {
   const [mainTheme, setMainTheme] = useState({});
   const [antTheme, setAntTheme] = useState({
-    token: {
-      colorPrimary: '#00b96b',
-    },
+    // token: {
+    //   colorPrimary: '#00b96b',
+    // },
   });
   const theme = createTheme(mainTheme);
 
@@ -96,7 +96,7 @@ function App() {
                     <ConfigProvider theme={antTheme}>
                       <AntDCustomizer
                         mainTheme={antTheme}
-                        setMainTheme={antTheme}
+                        setMainTheme={setAntTheme}
                       />
                     </ConfigProvider>
                   }

@@ -11808,11 +11808,11 @@ const app_config = {
       
       /*# sourceMappingURL=bootstrap.css.map */`
     },
-    tailwind: {
-      link: 'customizetailwind',
-      accent : ["primary", "secondary", "success", "error"],
-      icon : 'tailwind_icon.png'
-    },
+    // tailwind: {
+    //   link: 'customizetailwind',
+    //   accent : ["primary", "secondary", "success", "error"],
+    //   icon : 'tailwind_icon.png'
+    // },
     materialUI: {
       link: 'customizemui',
       accent : ["primary", "secondary", "success", "error"],

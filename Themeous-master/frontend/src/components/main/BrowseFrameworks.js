@@ -9,7 +9,7 @@ const BrowseFrameworks = () => {
   const displayFrameworks = () => {
     return Object.keys(options).map((key, index) => {
       return (
-        <div className="col-md-6" key={key}>
+        <div className="col-md-4" key={key}>
           <Link to={`/user/${options[key].link}`}>
           <div className="card my-3">
             <div className="card-body">
