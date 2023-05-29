@@ -266,7 +266,6 @@ const AntDCustomizer = ({ mainTheme, setMainTheme }) => {
           </div>
         </div>
       </div>
-
       <hr />
 
       <div className="container">
