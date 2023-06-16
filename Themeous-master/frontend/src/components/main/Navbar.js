@@ -12,7 +12,7 @@ const Navbar = () => {
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <NavLink className="navbar-brand" to="/main/home">
               <div className="d-flex align-items-center">
-                <img src="/logo.png" height={50} alt="" />
+                <img src="/logo.png" style={{height: '50px'}} alt="" />
                 <h3 className="ms-2">{title}</h3>
               </div>
             </NavLink>

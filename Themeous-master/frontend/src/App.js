@@ -1,26 +1,27 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import Admin from "./components/admin";
-import Main from "./components/main";
-import Login from "./components/main/Login";
-import Register from "./components/main/Register";
-import User from "./components/user";
-import Customize from "./components/user/Customize";
-import MUICustomizer from "./components/user/MUICustomizer";
-import { ThemeProvider, createTheme, useTheme } from "@mui/material";
-import { useState } from "react";
-import BrowseFrameworks from "./components/main/BrowseFrameworks";
-import { Toaster } from "react-hot-toast";
-import AdminProvider from "./context/AdminProvider";
-import UserProvider from "./context/UserProvider";
-import AdminAuth from "./auth/AdminAuth";
-import UserAuth from "./auth/UserAuth";
-import UserProfile from "./components/user/UserProfile";
-import Home from "./components/main/Home";
-import MyThemes from "./components/user/MyThemes";
-import { ConfigProvider } from "antd";
-import AntDCustomizer from "./components/user/AntDCustomizer";
+import logo from './logo.svg';
+import './App.css';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import Admin from './components/admin';
+import Main from './components/main';
+import Login from './components/main/Login';
+import Register from './components/main/Register';
+import User from './components/user';
+import Customize from './components/user/Customize';
+import MUICustomizer from './components/user/MUICustomizer';
+import { ThemeProvider, createTheme, useTheme } from '@mui/material';
+import { useState } from 'react';
+import BrowseFrameworks from './components/main/BrowseFrameworks';
+import { Toaster } from 'react-hot-toast';
+import AdminProvider from './context/AdminProvider';
+import UserProvider from './context/UserProvider';
+import AdminAuth from './auth/AdminAuth';
+import UserAuth from './auth/UserAuth';
+import UserProfile from './components/user/UserProfile';
+import Home from './components/main/Home';
+import MyThemes from './components/user/MyThemes';
+import { ConfigProvider } from 'antd';
+import AntDCustomizer from './components/user/AntDCustomizer';
+import TailwindCustomizer from './components/user/TailwindCustomizer';
 
 function App() {
   const [mainTheme, setMainTheme] = useState({});
@@ -31,13 +32,8 @@ function App() {
   });
   const theme = createTheme(mainTheme);
 
-  const [currentUser, setCurrentUser] = useState(
-    JSON.parse(sessionStorage.getItem("user"))
-  );
-  const [currentAdmin, setCurrentAdmin] = useState(
-    JSON.parse(sessionStorage.getItem("admin"))
-  );
-
+  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
+  const [currentAdmin, setCurrentAdmin] = useState(JSON.parse(sessionStorage.getItem('admin')));
   return (
     <div>
       <BrowserRouter>
@@ -70,10 +66,7 @@ function App() {
                   path="customizemui"
                   element={
                     <ThemeProvider theme={theme}>
-                      <MUICustomizer
-                        mainTheme={mainTheme}
-                        setMainTheme={setMainTheme}
-                      />
+                      <MUICustomizer mainTheme={mainTheme} setMainTheme={setMainTheme} />
                     </ThemeProvider>
                   }
                 />
@@ -83,10 +76,7 @@ function App() {
                   path="muicustomizer"
                   element={
                     <ThemeProvider theme={theme}>
-                      <MUICustomizer
-                        mainTheme={mainTheme}
-                        setMainTheme={setMainTheme}
-                      />
+                      <MUICustomizer mainTheme={mainTheme} setMainTheme={setMainTheme} />
                     </ThemeProvider>
                   }
                 />
@@ -94,13 +84,11 @@ function App() {
                   path="customizeant"
                   element={
                     <ConfigProvider theme={antTheme}>
-                      <AntDCustomizer
-                        mainTheme={antTheme}
-                        setMainTheme={setAntTheme}
-                      />
+                      <AntDCustomizer mainTheme={antTheme} setMainTheme={setAntTheme} />
                     </ConfigProvider>
                   }
                 />
+                <Route path="customizetailwind" element={<TailwindCustomizer />} />
               </Route>
               <Route path="main" element={<Main />}>
                 <Route path="login" element={<Login />} />

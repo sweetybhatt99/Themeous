@@ -29,7 +29,8 @@ const Navbar = () => {
                 : "/avatar.png"
             }
             className="rounded-circle"
-            height={30}
+            style={{height: '50px'}}
+            alt=""
           />
         </NavLink>
         <ul className="dropdown-menu">
