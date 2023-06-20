@@ -3,6 +3,7 @@ import './App.css';
 import Preview from './components/Preview';
 import { useEffect, useState } from 'react';
 import app_config from './config';
+import Navbar from './components/Navbar';
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div>
+      <Navbar />
       <header>
         <div className="container">
           <h1 className="text-5xl">Customizer</h1>
@@ -52,7 +54,7 @@ function App() {
               <h3>Sel Color</h3>
               <input type='color' onChange={e => updateColor(e.target.value)} />
 
-              <button onClick={downloadConfig}>Download Config</button>
+              <button className='flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded' onClick={downloadConfig}>Download Config</button>
             </div>
           </div>
         </div>
